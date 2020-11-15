@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+      @import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,regular,500,700,900);
+      @import url(./css/slick.css);
+      @import url(./css/slick-theme.css);
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "Noto Sans TC";
+        box-sizing: border-box;
+      }
+      body {
+        max-width: 100%;
+      }
+      .main-header {
+        background: linear-gradient(-45deg, #ffaaf0, #f8c3c1);
+      }
+      .main-header .container {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        max-width: 1920px;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .main-header .logo {
+        width: 200px;
+      }
+      .main-header .logo img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      .main-header .main-nav {
+        display: flex;
+        font-size: 13px;
+      }
+      .main-header .main-nav a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 1em;
+        position: relative;
+        transform: translateY(0px);
+        transition: 0.3s;
+        /*不加這個會超出去,因為絕對定位,需要父層的相對定位定在裡面*/
+      }
+      .main-header .main-nav a:hover {
+        transform: translateY(-10px);
+      }
+
+      /*超連結上的展開線*/
+      .main-header .main-nav a:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        height: 0;
+        bottom: 0px;
+        border-bottom: 1px solid #fff;
+        transition: 1s;
+        max-width: 100%;
+      }
+      .main-header .main-nav a:hover:after {
+        left: 0;
+        right: 0;
+      } /*超連結上的展開線*/
+      .container .main-nav ul {
+        display: flex;
+      }
+
+      .main-header .header-search {
+        display: flex;
+      }
+      .main-header .header-search button,
+      .main-header .header-search input {
+        border: none;
+        background-color: #fff;
+        padding: 1px 10px;
+      }
+      .main-header .header-search button:focus,
+      .main-header .header-search input:focus {
+        outline: none;
+      }
+
+      .main-header .header-search button {
+        border-radius: 200px;
+      }
+      .main-header .header-search input {
+        border-radius: 200px;
+      }
+      .open_menu {
+        position: relative;
+      }
+      .open_menu ul {
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        top: -93px;
+        transition: 0.5s;
+        z-index: 0;
+      }
+      .open_menu ul > li {
+        padding: 5px 0;
+      }
+      .open_menu li:hover ul {
+        top: 20px;
+        opacity: 1;
+        z-index: 100;
+      }
+      /*main-header*/
+      /*main-header*/
+      /*main-header*/
+      /*main-header*/
+      /*media*/
+      /*media*/
+      /*media*/
+      /*media*/
+
+      @media screen and (max-width: 414px) {
+        .main-header .main-footer {
+          max-width: 100%;
+          padding: 10px;
+        }
+
+        .main-header .container {
+          display: flex;
+          flex-direction: column;
+        }
+        .container .main-nav {
+          flex-direction: column;
+          justify-content: center;
+          /* align-items: center; */
+          margin: 10px auto;
+        }
+        .container .main-nav ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin: 10px -80px 10px auto;
+        }
+        .open_menu ul > li {
+          padding: 5px 0;
+        }
+        .open_menu li:hover ul {
+          top: 0;
+          opacity: 1;
+          display: block;
+          position: relative;
+        }
+        /**/
+        .wrap_out {
+          max-width: 100%;
+          /* display: flex; */
+          display: flex;
+        }
+        .wrap {
+          max-width: 100%;
+        }
+        .item {
+          float: inline-start;
+          position: relative;
+        }
+        .item .txt {
+          position: relative;
+        }
+
+        /**/
+        .slick_container img {
+          width: 100%;
+        }
+        .main-footer .container {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .footer-item img {
+          width: 150px;
+          height: 150px;
+          padding: 0 132px 0 132px;
+        }
+      }
+      /*media*/
+      /*media*/
+      /*media*/
+      /*media*/
+      /*slick*/
+      /*slick*/
+      /*slick*/
+      /*slick*/
+      .slick_container {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .slick_container img {
+        width: 100%;
+      }
+      .slick-prev:before,
+      .slick-next:before {
+        display: none;
+      }
+      .slick-prev {
+        left: 0px;
+      }
+      .slick-next {
+        right: 0px;
+      }
+      .slick-dotted.slick-slider {
+        margin-bottom: -5px;
+      }
+      .slick-dots {
+        bottom: 10px;
+      }
+      /*slick*/
+      /*slick*/
+      /*slick*/
+      /*slick*/
+      /*wrap*/
+      /*wrap*/
+      /*wrap*/
+      .wrap_out {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .wrap {
+        max-width: 100%;
+        overflow: hidden;
+        margin: 10px auto;
+        /* border: 1px red solid; */
+      }
+      .item {
+        float: left;
+        max-width: 100%;
+        position: relative;
+        /* margin: 10px; */
+
+        /* border: 1px black solid; */
+      }
+      .item img {
+        max-width: 100%;
+        vertical-align: middle;
+        margin: auto;
+        text-align: center;
+      }
+      .item:first-child {
+        width: 50%;
+      }
+      .item:first-child ~ .item {
+        width: 25%;
+      }
+      .item .txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 35px;
+
+        text-align: left;
+        color: wheat;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        transition: 0.5s;
+        opacity: 0;
+      }
+      .item .txt h3 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .item .txt p {
+        font-size: 14px;
+        font-weight: 100;
+      }
+      .item:hover .txt {
+        opacity: 1;
+      }
+
+      /*wrap*/
+      /*wrap*/
+      /*wrap*/
+      /*wrap*/
+      /*main-footer*/
+      /*main-footer*/
+      /*main-footer*/
+      /*main-footer*/
+      .main-footer {
+        padding: 20px 0 0 0;
+        background: linear-gradient(-45deg, #ffaaf0, #f8c3c1);
+      }
+      .main-footer .container {
+        display: flex;
+        max-width: 1920px;
+        margin: auto;
+      }
+      .footer-item img {
+        width: 150px;
+        height: 150px;
+        margin: 0 15px 0 50px;
+      }
+      .footer-item {
+        margin: 0 10px;
+        flex-grow: 1;
+      }
+      .footer-item .nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-item .nav p {
+        color: #ddd;
+      }
+      .footer-item a:hover {
+        color: #fcab5f;
+      }
+      .footer-item a:hover > p {
+        color: #fff;
+      }
+      .footer-item h4 {
+        font-size: 24px;
+        color: white;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+      }
+      .footer-item a {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.4;
+        text-decoration: none;
+        padding: 5px 0;
+      }
+      .footer-subs {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-content: center; */
+      }
+      .footer-subs form {
+        display: flex;
+        width: 100%;
+        margin: auto 0;
+      }
+      .footer-subs input[type="text"],
+      .footer-subs input[type="submit"] {
+        border: none;
+        padding: 5px 10px;
+      }
+      .footer-subs input[type="text"] {
+        width: 0;
+        flex-grow: 1;
+      }
+      .footer-subs input[type="submit"] {
+        color: #70f6df;
+        background-color: #3e5293;
+      }
+      .conpyright {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px 0;
+        background: linear-gradient(-45deg, #ffaaf0, #f8c3c1);
+        color: #70f6df;
+      }
+      /*footer-end*/
+      /**/
+    </style>
+  </head>
+  <body>
+    <div class="main-header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="./img/logo-dark.png" alt="" />
+        </a>
+        <div class="main-nav">
+          <form class="header-search">
+            <input type="search" placeholder="店家查詢" />
+            <button><i class="fas fa-search"></i></button>
+          </form>
+          <ul class="open_menu">
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">門市查詢</a></li>
+            <li><a href="#">最新消息</a></li>
+            <li>
+              <a href="#"
+                >商品介紹&nbsp;<i class="fas fa-angle-double-down"></i
+              ></a>
+              <ul>
+                <li><a href="#">咖啡豆專區</a></li>
+                <li><a href="#">商品專區</a></li>
+                <li><a href="#">下載訂單</a></li>
+                <li><a href="#">購買商品禮盒</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >咖啡世界&nbsp;<i class="fas fa-angle-double-down"></i
+              ></a>
+              <ul>
+                <li><a href="#">咖啡職人</a></li>
+                <li><a href="#">咖啡生活</a></li>
+              </ul>
+            </li>
+            <li><a href="#">關於我們</a></li>
+            <li>
+              <a href="#"
+                >聯絡我們&nbsp;<i class="fas fa-angle-double-down"></i
+              ></a>
+              <ul>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">人才招募</a></li>
+              </ul>
+            </li>
+            <li><a href="#">ENG</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--頁首板塊區-->
+    <!--頁首板塊區-->
+    <!--頁首板塊區-->
+    <!--slider-->
+    <!--slider-->
+    <!--slider-->
+    <div class="container">
+      <ul class="slick_container">
+        <li class="img_li">
+          <img src="./img/1920-1080-1.jpg" />
+        </li>
+        <li class="img_li">
+          <img src="./img/1920-1080-2.jpg" />
+        </li>
+        <li class="img_li">
+          <img src="./img/1920-1080-3.jpg" />
+        </li>
+        <li class="img_li">
+          <img src="./img/1920-1080-4.jpg" />
+        </li>
+        <li class="img_li">
+          <img src="./img/1920-1080-5.jpg" />
+        </li>
+      </ul>
+    </div>
+    <!--slider-->
+    <!--slider-->
+    <!--slider-->
+    <!--wrap-->
+    <!--wrap-->
+    <!--wrap-->
+    <div class="wrap_out">
+      <div class="wrap">
+        <div class="item">
+          <img src="./img/500-1.jpg" alt="" />
+          <div class="txt">
+            <h3>【巴拿馬藝伎 日曬 咖啡豆】</h3>
+            <p>
+              世界冠軍品種，被稱作精品咖啡指標的巴拿馬藝伎，產量稀少珍貴，採用日曬處理、淺中焙度，口感乾淨明亮，聞得到花香、喝得到熱帶水果的甜韻。<br />
+
+              風味：水蜜桃・熱帶水果・巧克力／焙度：淺中<br />
+              調性：水果調性
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/500-2.jpg" alt="" />
+          <div class="txt">
+            <h3>【有機衣索比亞 日曬處理法】</h3>
+            <p>
+              嚴選咖啡原鄉衣索比亞超人氣產區古吉Guji、採非洲棚日曬處理的頂級日曬豆，果實經陽光曝曬果肉慢慢醞釀，風味細緻飽滿。。<br />
+              風味：豐富水果調性・莓果・杏桃・BODY飽滿厚實／焙度：中淺<br />
+              調性：水果調性
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/500-3.jpg" alt="" />
+          <div class="txt">
+            <h3>【完美日曬耶加雪菲 G1 咖啡豆】</h3>
+            <p>
+              咖啡果實經日曬後糖分轉化吸入咖啡豆中，能品嚐到濃郁奔放的果香、草莓、鳳梨等熱帶水果風味，尾韻甘甜醇厚。<br />
+              風味：果香・草莓・鳳梨・熱帶水果／焙度：淺 <br />
+              調性：水果調性
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/500-4.jpg" alt="" />
+          <div class="txt">
+            <h3>【水果耶加雪菲 咖啡豆】</h3>
+            <p>
+              採用水洗處理法，過程中去除果皮與果肉並篩選掉不成熟的果實，與日曬法相比風味更清新香甜。<br />
+              風味：水果感・葡萄・藍莓／焙度：淺 <br />
+              調性：水果調性
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./img/500-5.jpg" alt="" />
+          <div class="txt">
+            <h3>【超級肯亞 咖啡豆】</h3>
+            <p>
+              超級肯亞被譽為非洲精品豆之王，酸感優於一般肯亞能感受到極明亮的酸質，帶有黑醋栗、烏梅風味。<br />
+              風味：柑橘・黑醋栗・烏梅・蔗糖／焙度：中 <br />
+              調性：水果調性
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--wrap-->
+    <!--wrap-->
+    <!--wrap-->
+    <!--頁尾板塊區-->
+    <!--頁尾板塊區-->
+    <!--頁尾板塊區-->
+    <div class="main-footer">
+      <div class="container">
+        <div class="footer-item">
+          <a href="#"><img src="./img/logo-girl-image()-1.png" alt="" /></a>
+        </div>
+        <div class="footer-item">
+          <h4>熱門訊息</h4>
+          <div class="nav">
+            <a href="#">
+              <i class="fas fa-angle-right"></i>
+              11.04~12.31&nbsp;綠色時尚新選擇 | 免費升級燕麥 ➜
+              <p>Nov2,2020</p>
+            </a>
+            <a href="#">
+              <i class="fas fa-angle-right"></i>11-12月黑卡優惠 ➜
+              <p>Oct30,2020</p>
+            </a>
+            <a href="#">
+              <i class="fas fa-angle-right"></i
+              >11-12月黑卡尋豆獅：冠軍產區<衣索比亞 古吉> ➜
+              <p>Nov2,202</p>
+            </a>
+          </div>
+        </div>
+        <div class="footer-item">
+          <h4>咖啡世界</h4>
+          <div class="nav">
+            <a href="#">
+              <i class="fas fa-angle-right"></i>「台灣⇄京都」橫跨千里 尋茶之旅
+              <p>Apr 1,2020</p>
+            </a>
+            <a href="#">
+              <i class="fas fa-angle-right"></i>京都宇治抹茶甜點職人來台技術交流
+              <p>Apr 1,2020</p>
+            </a>
+            <a href="#">
+              <i class="fas fa-angle-right"></i>京都宇治茶職人來台技術交流
+              <p>Apr 1,2020</p>
+            </a>
+          </div>
+        </div>
+        <div class="footer-item footer-subs">
+          <h4>訂閱電子報</h4>
+          <div class="nav">
+            <form>
+              <input type="text" name="" />
+              <input type="submit" value="訂閱" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="conpyright">Copyright &copy; 2020 EthanShang</div>
+    </div>
+    <!--頁尾板塊區-->
+    <!--頁尾板塊區-->
+    <!--頁尾板塊區-->
+    <script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script>
+      $(".slick_container").slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear",
+      });
+    </script>
+  </body>
+</html>
