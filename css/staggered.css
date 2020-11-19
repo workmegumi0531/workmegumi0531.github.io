@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,regular,500,700,900);
+
+.staggered_body {
+  padding: 100px 0;
+  background: linear-gradient(30deg, #007bff, #17a2b8) fixed center center/ 100%
+    100%;
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  margin: 10px auto;
+}
+.staggered_wrap {
+  width: 1200px;
+  margin: auto;
+}
+.staggered_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.staggered_item .staggered_pic {
+  width: 55%;
+  flex-shrink: 0; /*重點*/
+}
+.staggered_item .staggered_pic img {
+  width: 100%;
+  vertical-align: middle;
+}
+.staggered_item .staggered_text {
+  width: 55%;
+  background-color: #fa8;
+  flex-shrink: 0; /*重點*/
+  padding: 50px 30px;
+  position: relative;
+  z-index: 1;
+}
+.staggered_item p {
+  font-size: 17px;
+}
+.staggered_item > :first-child {
+  margin-right: -10%; /*重點*/
+}
+.staggered_item:nth-child(1) .staggered_text {
+  background-color: rgba(32, 201, 151, 0.7);
+}
+.staggered_item:nth-child(2) .staggered_text {
+  background-color: rgba(232, 62, 140, 0.7);
+}
+.staggered_item:nth-child(3) .staggered_text {
+  background-color: rgba(111, 66, 193, 0.7);
+}

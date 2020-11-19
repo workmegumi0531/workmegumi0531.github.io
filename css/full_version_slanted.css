@@ -1,0 +1,47 @@
+.full_version_slanted_banner {
+  width: 100%;
+  height: 700px; /*改變圖片高度*/
+  background-color: #ccc;
+  background: linear-gradient(115deg /*角度*/, #dc3545 50%, transparent 50%)
+      center center/ 100% 100%,
+    /*:漸層色(角度 , 色彩 飽滿度,  透明度 幾% )  位子 位子 / 寬度 高度 */
+      url(../img/full_version_slanted/88-1200x700.jpg),
+    right center / auto 100%;
+  margin: 10px auto;
+}
+.full_version_slanted_container {
+  height: 100%;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.full_version_slanted_banner-txt {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /*因為 flex-direction的關係 副軸占滿整層區塊 banner-txt h1 的 border 會超出文字 , 在此加上這一段*/
+}
+.full_version_slanted_banner-txt h1 {
+  font-size: 80px;
+  border-bottom: 1px solid #333;
+  font-weight: 900;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
+}
+.full_version_slanted_banner-txt h1 small {
+  display: block;
+  font-size: 53px;
+  font-weight: 500;
+}
+.full_version_slanted_banner-txt h2 {
+  font-size: 50px;
+  font-weight: 500;
+}
+.full_version_slanted_banner-txt p {
+  width: 90%;
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+}

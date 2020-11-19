@@ -1,0 +1,24 @@
+.jumbotron {
+  background-image: url("https://picsum.photos/1920/400?random=3.jpg");
+}
+.breadcrumb {
+  margin-bottom: 0;
+}
+.bootstrap .path {
+  background-color: #000;
+}
+.path .breadcrumb {
+  background-color: transparent;
+}
+.main-footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+}
+.photo {
+  margin-bottom: 10px;
+}
+.bootstrap .container h1,
+.bootstrap .container p {
+  color: antiquewhite;
+}

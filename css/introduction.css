@@ -1,0 +1,118 @@
+.introduction_body {
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  margin: 10px auto;
+}
+
+.introduction_wrap {
+  width: 100%;
+  height: 100%; /*改變圖片高度*/
+  background-color: #ccc;
+  background: linear-gradient(115deg /*角度*/, #e83e8c 50%, transparent 50%)
+      right center/ 100% 100%,
+    /*:漸層色(角度 , 色彩 飽滿度,  透明度 幾% )  位子 位子 / 寬度 高度 */
+      url(../img/introduction/106954.jpg),
+    right center / 100% 100%;
+  background-attachment: scroll;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+.introduction_flex-wrap {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.introduction_item {
+  width: 350px;
+  margin: 15px;
+
+  text-align: center;
+  background-color: white;
+  border: 1px #aaa solid;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+.introduction_item img {
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.introduction_item .introduction_txt {
+  padding: 20px;
+  position: relative;
+}
+.introduction_item .introduction_txt:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  border-top: 50px solid transparent;
+  border-left: 175px solid #fff;
+  border-right: 175px solid #fff;
+  transform: translateY(-100%);
+}
+.introduction_item h1 {
+  border-bottom: 1px #aaa solid;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  transition: 0.5;
+}
+
+.introduction_item p {
+  line-height: 1.6;
+  font-weight: 100;
+  transition: 0.5s;
+}
+.introduction_item:hover {
+  transform: translateY(-50px);
+}
+/* .introduction_item:hover .introduction_txt {
+  background-image: linear-gradient(0deg, #fb8076, #feb85d);
+} */
+.introduction_item:hover .introduction_txt:before {
+  border-left: 175px solid#fff;
+  border-right: 175px solid #fff;
+}
+.introduction_item:hover h1 {
+  color: #fb8076;
+  border-bottom-color: #fb8076;
+}
+.introduction_item:hover p {
+  color: #fb8076;
+}
+@media screen and (max-width: 768px) {
+  .introduction_flex-wrap {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .introduction_wrap {
+    background-attachment: fixed;
+  }
+}
+@media screen and (max-width: 375px) {
+  .introduction_flex-wrap {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .introduction_wrap {
+    background-attachment: fixed;
+  }
+}

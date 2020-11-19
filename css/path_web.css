@@ -1,0 +1,38 @@
+.path_web_body {
+  background-color: #562870;
+  margin: 10px auto;
+}
+.path_web_wrap {
+  padding: 10px 0;
+  background-color: #ec008b;
+  box-shadow: 0px 5px 5px hsla(260, 100%, 20%, 0.5);
+}
+.path_web_breadcrumb {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.path_web_breadcrumb ul {
+}
+.path_web_breadcrumb li {
+  padding: 0 20px;
+}
+.path_web_breadcrumb a:hover,
+.path_web_breadcrumb li:last-child a {
+  color: #ff0;
+}
+.path_web_breadcrumb li + li {
+  padding-left: 0;
+  color: #fff;
+}
+.path_web_breadcrumb li + li:before {
+  content: "/";
+  margin-right: 20px;
+}
+.path_web_breadcrumb a {
+  text-decoration: none;
+  color: #fff;
+}
+.path_web_breadcrumb a:hover {
+  color: #ff0;
+}
