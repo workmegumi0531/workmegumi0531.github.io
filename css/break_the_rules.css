@@ -1,10 +1,64 @@
 .break_the_rules_body {
+  height: 100%; /*垂直至中*/
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #fffaf0, #f8c3c1);
+  margin: 10px auto;
 }
 .break_the_rules_wrap {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+  /* background-color: #999; */
+  padding-top: 75px; /*把item的空間補回去, 避免跑版*/
 }
 .break_the_rules_item {
+  width: 270px;
+  margin: 0 15px;
+  text-align: center;
+  background-color: #fff;
+  border: 10px solid #f9cec2;
+  border-radius: 20px;
+}
+.break_the_rules_item a {
+  color: #f9cec2;
 }
 .break_the_rules_icon {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  margin: -75px auto 0; /*破格*/
+  font-size: 65px;
+  line-height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
 }
+.break_the_rules_icon::before {
+  /*半圓邊框製作*/
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top: 10px solid #f9cec2;
+  border-right: 10px solid #f9cec2;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: rotate(-45deg); /*讓邊框轉向*/
+}
+
 .break_the_rules_txt {
+  padding: 20;
+}
+.break_the_rules_txt h4 {
+  color: #f5afac;
+}
+.break_the_rules_txt p {
+  color: #bbb;
 }
