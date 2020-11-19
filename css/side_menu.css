@@ -17,7 +17,6 @@
   z-index: 1;
   opacity: 0.9;
 }
-
 #side_menu form {
   display: flex;
   margin: 0 10px 50px;
@@ -32,7 +31,6 @@
   color: #fff;
   outline: none;
 }
-
 #side_menu form input {
   width: 230px;
 }
@@ -68,7 +66,6 @@
 #side_menu .nav li .fas {
   position: relative;
   left: -30px;
-
   transform: scale(0);
   transition: 0.3s;
 }
@@ -105,7 +102,7 @@
   transform: translateX(0);
 }
 #side_menu_switch:checked + #side_menu label i {
-  transform: rotate(540deg);
+  transform: rotateY(540deg);
 }
 
 #side_menu .nav ul {
