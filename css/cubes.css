@@ -1,15 +1,16 @@
 .cubes_body {
   background-color: azure;
+  text-align: center;
 }
 .cubes_wrap {
   width: 100%;
-  margin: 0 0 0 85px;
   overflow: hidden;
   padding: 10px;
 }
 .cubes_item {
   float: left;
   position: relative;
+  left: 100px;
 }
 .cubes_item:first-child {
   width: 45%;
