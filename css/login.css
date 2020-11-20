@@ -1,0 +1,71 @@
+.login_wrap {
+  /* width: 1920px;
+  height: 1080px; */
+  height: 100%;
+  background: url(../img/login/881-1920x1080.jpg) no-repeat center center /
+    cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.login {
+  width: 600px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px #fff solid;
+  box-shadow: 0 0 60px #000;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_from {
+  font-family: "Noto Sans TC", sans-serif;
+  width: 300px;
+  color: #fff;
+}
+.login_group_back {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.login_from a {
+  text-decoration: none;
+  color: gainsboro;
+}
+.login_from a:hover {
+  color: gold;
+}
+.login_from h2 {
+  font-size: 45px;
+}
+.login_from .login_group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+}
+.login_from input {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  line-height: 2;
+  outline: none;
+  padding: 0 10px;
+}
+.login_from .btn_group {
+  font-size: 0;
+  margin-top: 30px;
+}
+.login_from .login_btn {
+  font-size: 16px;
+  border: none;
+  background-color: #6ab4fe;
+  width: 140px;
+  padding: 5px 0;
+  border-radius: 5px;
+  color: #eee;
+}
+.login_from .login_btn + .login_btn {
+  margin-left: 20px;
+}

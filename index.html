@@ -23,6 +23,7 @@
       @import url(./css/table_detail.css);
       @import url(./css/side_menu.css);
       @import url(./css/order.css);
+      @import url(./css/login.css);
       * {
         padding: 0;
         margin: 0;
@@ -30,10 +31,14 @@
         list-style: none;
         font-family: "Noto Sans TC", sans-serif;
       }
+      html{
+        height: 100%;
+      }
       body {
         background: url(./img/pexels-photo-2387793.jpeg) no-repeat fixed center /
           100% 100%;
           position: relative;
+          height: 100%;
       }
     </style>
   </head>
@@ -1219,6 +1224,52 @@
         </table>
       </div>
     </div>
+    <div id="order_wrap">
+      <div id="order_in">
+        <ul id="order_list">
+          <li>
+            <i class="fas fa-file-alt"></i>
+            收到訂單
+          </li>
+          <li id="order_active">
+            <i class="fas fa-archive"></i>
+            撿貨中
+          </li>
+          <li>
+            <i class="fas fa-truck"></i>
+            運送中
+          </li>
+          <li>
+            <i class="fas fa-check-square"></i>
+            已送達
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="login_wrap">
+      <div class="login">
+        <form class="login_from">
+          <h2>會員登入</h2>
+          <div class="login_group">
+            <label for="login_user_id">帳號</label>
+            <input type="text" id="login_user_id">
+          </div>
+          <div class="login_group">
+            <label for="login_user_password">密碼</label>
+            <input type="password" id="login_user_password">
+          </div>
+        <div class="btn_group">
+          <button class="login_btn">登入</button>
+          <button class="login_btn">取消</button>
+        </div>
+        <div class="login_group_back">
+          <a href="#">註冊會員</a>
+          <p>/</p>
+          <a href="#">找回密碼</a>
+       </div>
+        </form>
+      </div>
+    </div>
     <div class="louisacoffee_main-footer">
       <div class="louisacoffee_container">
         <div class="louisacoffee_footer-item">
@@ -1427,28 +1478,7 @@
           
           
       </div>      
-      <div id="order_wrap">
-        <div id="order_in">
-          <ul id="order_list">
-            <li>
-              <i class="fas fa-file-alt"></i>
-              收到訂單
-            </li>
-            <li id="order_active">
-              <i class="fas fa-archive"></i>
-              撿貨中
-            </li>
-            <li>
-              <i class="fas fa-truck"></i>
-              運送中
-            </li>
-            <li>
-              <i class="fas fa-check-square"></i>
-              已送達
-            </li>
-          </ul>
-        </div>
-      </div>
+      
 
     <script src="./js/jquery-3.5.1.js"></script>
     <script src="./js/bootstrap/bootstrap.js"></script>
