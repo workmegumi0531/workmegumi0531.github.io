@@ -1,40 +1,105 @@
 .timeline_body {
   background: linear-gradient(25deg, #7f7fd5, #86a8e7, #91eae4);
-  height: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .timeline_wrap {
   width: 1200px;
   margin: auto;
+  height: 100%;
+  text-align: center;
 }
-.timeline_wrap h1 {
-}
-
 .tineline_timeline {
-  padding: 100px 0; /*左右不設定為0, 會無效*/
-}
-
-.tineline_timeline ul {
+  /* padding: 100px 0; 左右不設定為0, 會無效 */
+  padding: 100px 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -2;
 }
 .tineline_timeline li {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   padding: 20px 0;
+  position: relative;
+  height: 100%;
 }
-
 .tineline_timeline li:nth-child(odd) {
-  float: left;
   padding-right: 100px;
+  width: 50%;
 }
 .tineline_timeline li:nth-child(even) {
-  float: right;
+  width: 50%;
   padding-left: 100px;
   transform: translateY(50%); /*使整排,往Y軸方向移動*/
 }
+.tineline_timeline li:nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #555;
+  top: 0;
+  right: 0;
+}
+.tineline_timeline li:last-child::after {
+  height: 50%;
+}
+.tineline_timeline li::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #555;
+  z-index: 99;
+}
+.tineline_timeline li:nth-child(odd)::before {
+  right: -10px;
+}
+.tineline_timeline li:nth-child(even)::before {
+  left: -10px;
+}
+.tineline_timeline h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  background-color: #555;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.tineline_timeline li:nth-child(odd) h2::after {
+  right: 0;
+}
+.tineline_timeline li:nth-child(even) h2::after {
+  left: 0;
+}
+
 .tineline_timeline a {
   text-decoration: none;
-  display: block; /*不設定以下顏色跟框線會無效*/
+  display: block; /*不設定以下顏色跟框線會無效,超連結本身就不是一個block*/
   background: #fff;
   border: 1px solid #aaa;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #777;
+  transition: 0.8s;
+}
+.tineline_timeline a:hover {
+  background-color: #95bfff;
+}
+.tineline_timeline a:hover h2,
+.tineline_timeline a:hover p {
+  color: white;
 }
 .tineline_timeline h2 {
   color: #333;
