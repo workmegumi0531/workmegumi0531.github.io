@@ -1,0 +1,46 @@
+.timeline_body {
+  background: linear-gradient(25deg, #7f7fd5, #86a8e7, #91eae4);
+  height: 100%;
+}
+.timeline_wrap {
+  width: 1200px;
+  margin: auto;
+}
+.timeline_wrap h1 {
+}
+
+.tineline_timeline {
+  padding: 100px 0; /*左右不設定為0, 會無效*/
+}
+
+.tineline_timeline ul {
+}
+.tineline_timeline li {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.tineline_timeline li:nth-child(odd) {
+  float: left;
+  padding-right: 100px;
+}
+.tineline_timeline li:nth-child(even) {
+  float: right;
+  padding-left: 100px;
+  transform: translateY(50%); /*使整排,往Y軸方向移動*/
+}
+.tineline_timeline a {
+  text-decoration: none;
+  display: block; /*不設定以下顏色跟框線會無效*/
+  background: #fff;
+  border: 1px solid #aaa;
+}
+.tineline_timeline h2 {
+  color: #333;
+  font-weight: 700;
+}
+.tineline_timeline p {
+  color: #666;
+  font-weight: 100;
+}

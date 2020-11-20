@@ -11,7 +11,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 1;
 }
 #order_list li {
   font-family: "Noto Sans TC", sans-serif;

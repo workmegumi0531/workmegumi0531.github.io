@@ -15,7 +15,6 @@
 }
 .nav_louisa_main-header .nav_louisa_logo img {
   width: 100%;
-  vertical-align: middle;
 }
 .nav_louisa_main-header .nav_louisa_main-nav {
   display: flex;
@@ -51,6 +50,7 @@
 } /*超連結上的展開線*/
 .nav_louisa_container .nav_louisa_main-nav ul {
   display: flex;
+  align-items: center;
 }
 
 .nav_louisa_main-header .nav_louisa_header-search {

@@ -1,0 +1,83 @@
+.dialogue_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: #d3effb;
+}
+.dialogue {
+  width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px #3e92cc;
+  background-color: #f4f5f7;
+}
+.dialogue_user {
+  display: flex;
+  margin-bottom: 10px;
+}
+.dialogue_user .dialogue_avatar {
+  width: 60px;
+  text-align: center;
+  flex-shrink: 0; /*不讓物件自動縮小*/
+}
+
+.dialogue_local {
+  justify-content: flex-end;
+}
+.dialogue_pic {
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px #3e92cc;
+}
+.dialogue_pic img {
+  width: 100%;
+  vertical-align: middle;
+}
+.dialogue_name {
+}
+.dialogue_txt {
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+}
+.dialogue_txt span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  color: #bbb;
+  font-size: 12px;
+}
+.dialogue_remote .dialogue_txt {
+  margin-right: 80px;
+  margin-left: 20px;
+  background-color: #fff;
+  color: #a1b4c5;
+}
+.dialogue_local .dialogue_txt {
+  margin-right: 20px;
+  margin-left: 80px;
+  order: -1;
+  background-color: #3e92cc;
+  color: #fff;
+}
+.dialogue_remote .dialogue_txt::before,
+.dialogue_local .dialogue_txt::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.dialogue_remote .dialogue_txt::before {
+  border-right: 10px solid #fff;
+
+  left: -10px;
+}
+.dialogue_local .dialogue_txt::before {
+  border-left: 10px solid #3e92cc;
+  right: -10px;
+}
