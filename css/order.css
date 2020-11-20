@@ -1,0 +1,57 @@
+#order_wrap {
+  background-color: #185a9d;
+  margin: 10px auto;
+}
+#order_in {
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+#order_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+#order_list li {
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  color: white;
+  border-radius: 50%;
+  position: relative;
+  font-size: 30px;
+  background: linear-gradient(9deg, #185a9d, #43cea2);
+  box-shadow: 0px 0px 0px 4px #fff;
+}
+#order_list li .fas {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+#order_list li + li {
+  margin-left: 100px;
+}
+#order_list li + li::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  box-shadow: 0px 0px 0px 5px #fff;
+  background-color: #43cea2;
+  height: 10px;
+  top: 0;
+  bottom: 0;
+  left: -100px;
+  margin: auto;
+  z-index: -1;
+}
+#order_list li#order_active ~ li {
+  background: linear-gradient(9deg, #999, #ccc);
+}
+#order_list li#order_active ~ li::before {
+  background-color: #999;
+}

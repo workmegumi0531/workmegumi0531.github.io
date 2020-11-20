@@ -22,6 +22,7 @@
       @import url(./css/break_the_rules.css);
       @import url(./css/table_detail.css);
       @import url(./css/side_menu.css);
+      @import url(./css/order.css);
       * {
         padding: 0;
         margin: 0;
@@ -1426,7 +1427,28 @@
           
           
       </div>      
-      
+      <div id="order_wrap">
+        <div id="order_in">
+          <ul id="order_list">
+            <li>
+              <i class="fas fa-file-alt"></i>
+              收到訂單
+            </li>
+            <li id="order_active">
+              <i class="fas fa-archive"></i>
+              撿貨中
+            </li>
+            <li>
+              <i class="fas fa-truck"></i>
+              運送中
+            </li>
+            <li>
+              <i class="fas fa-check-square"></i>
+              已送達
+            </li>
+          </ul>
+        </div>
+      </div>
 
     <script src="./js/jquery-3.5.1.js"></script>
     <script src="./js/bootstrap/bootstrap.js"></script>
