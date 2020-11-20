@@ -1,96 +1,103 @@
-.nav_louisa_main-header {
+.nav_louisa_body {
   background: linear-gradient(0deg, #fe70d8, #3713c1);
 }
-.nav_louisa_main-header .nav_louisa_container {
+.nav_louisa_body .nav_louisa_wrap {
   display: flex;
-  align-items: center;
   padding: 20px;
-  max-width: 1240px;
+  align-items: center;
+  max-width: 1200px;
   margin: auto;
   flex-direction: row;
   justify-content: space-between;
 }
-.nav_louisa_main-header .nav_louisa_logo {
+.nav_louisa_body .nav_louisa_logo {
   width: 200px;
 }
-.nav_louisa_main-header .nav_louisa_logo img {
+.nav_louisa_body .nav_louisa_logo img {
   width: 100%;
+  vertical-align: middle;
 }
-.nav_louisa_main-header .nav_louisa_main-nav {
+.nav_louisa_wrap .nav_louisa_main-nav,
+.nav_louisa_wrap .nav_louisa_main-nav nav {
   display: flex;
+  margin: auto;
 }
-.nav_louisa_main-header .nav_louisa_main-nav a {
-  text-decoration: none;
+.nav_louisa_body .nav_louisa_main-nav a {
   color: #fff;
+  text-decoration: none;
   padding: 5px 1em;
   position: relative;
-  transform: translateY(0px);
-  transition: 0.3s;
   /*不加這個會超出去,因為絕對定位,需要父層的相對定位定在裡面*/
+  transition: 0.5s;
+  transform: translateY(0px);
 }
-.nav_louisa_main-header .nav_louisa_main-nav a:hover {
-  transform: translateY(-10px);
+.nav_louisa_body .nav_louisa_main-nav a:hover {
+  transform: translateY(-30px);
 }
-
 /*超連結上的展開線*/
-.nav_louisa_main-header .nav_louisa_main-nav a:after {
+.nav_louisa_body .nav_louisa_main-nav a:after {
   content: "";
   position: absolute;
-  left: 50%;
-  right: 50%;
+  left: 50%; /*將互動的線壓在正中央*/
+  right: 50%; /*將互動的線壓在正中央*/
   height: 0;
-  top: 0px;
-  border-top: 1px solid #fff;
-  transition: 1s;
-  max-width: 100%;
+  bottom: 0px;
+  border-bottom: 1px solid #fff;
+  transition: 0.5s;
 }
-.nav_louisa_main-header .nav_louisa_main-nav a:hover:after {
-  left: 0;
-  right: 0;
+.nav_louisa_body .nav_louisa_main-nav a:hover:after {
+  left: 0%; /*將互動的線往左右兩邊*/
+  right: 0%; /*將互動的線往左右兩邊*/
 } /*超連結上的展開線*/
-.nav_louisa_container .nav_louisa_main-nav ul {
+
+.nav_louisa_body .nav_louisa_header-search {
   display: flex;
-  align-items: center;
 }
 
-.nav_louisa_main-header .nav_louisa_header-search {
-  display: flex;
-}
-.nav_louisa_main-header .nav_louisa_header-search button,
-.nav_louisa_main-header .nav_louisa_header-search input {
+.nav_louisa_wrap .nav_louisa_header-search label,
+.nav_louisa_wrap .nav_louisa_header-search input {
   border: none;
-  background-color: #fff;
+  background-color: white;
   padding: 5px 10px;
   height: 30px;
-}
-.nav_louisa_main-header .nav_louisa_header-search button:focus,
-.nav_louisa_main-header .nav_louisa_header-search input:focus {
   outline: none;
 }
+.nav_louisa_wrap .searcg_local {
+  position: relative;
+}
+.nav_louisa_wrap .searcg_local .nav_louisa_header-search label {
+  border-radius: 200px;
+  position: relative;
+}
+.nav_louisa_wrap .searcg_local .nav_louisa_header-search input {
+  border-radius: 200px 0 0 200px;
+  padding-left: 20px;
+  position: relative;
+  transition: 1s;
+  width: 0%;
+  opacity: 0;
+}
+#checkbox11 {
+  display: none;
+}
 
-.nav_louisa_main-header .nav_louisa_header-search button {
-  border-radius: 200px;
-}
-.nav_louisa_main-header .nav_louisa_header-search input {
-  border-radius: 200px;
-}
 @media screen and (max-width: 376px) {
-  .nav_louisa_main-header {
+  .nav_louisa_body {
     width: 100%;
     padding: 10px;
   }
 
-  .nav_louisa_main-header .nav_louisa_container {
+  .nav_louisa_body .nav_louisa_wrap {
     display: flex;
     flex-direction: column;
   }
-  .nav_louisa_container .nav_louisa_main-nav {
+  .nav_louisa_wrap .nav_louisa_main-nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
   }
-  .nav_louisa_container .nav_louisa_main-nav ul {
+  .nav_louisa_wrap .nav_louisa_main-nav ul {
     flex-direction: column;
     align-items: flex-end;
     margin: 10px 0 10px auto;

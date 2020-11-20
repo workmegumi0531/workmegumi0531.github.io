@@ -26,6 +26,7 @@
       @import url(./css/login.css);
       @import url(./css/dialogue.css);
       @import url(./css/timeline.css);
+      @import url(./css/rhombus_typesetting.css);
       * {
         padding: 0;
         margin: 0;
@@ -45,39 +46,30 @@
     </style>
   </head>
   <body>
-    <div class="nav_louisa_main-header">
-      <div class="nav_louisa_container">
+    <input type="checkbox" id="checkbox11">
+    <div class="nav_louisa_body">
+      <div class="nav_louisa_wrap">        
         <a href="#" class="nav_louisa_logo">
           <img src="./img/nav_louisa/logo-dark.png" alt="" />
         </a>
-        <div class="nav_louisa_main-nav">
-          <form class="nav_louisa_header-search">
-            <input type="search" placeholder="店家查詢" />
-            <button><i class="fas fa-search"></i></button>
-          </form>
-          <ul>
+        <div class="nav_louisa_main-nav">         
+          <nav>
             <li><a href="#">選項一</a></li>
             <li><a href="#">選項二</a></li>
             <li><a href="#">選項三</a></li>
-            <li>
-              <a href="#"
-                >選項四&nbsp;<i class="fas fa-angle-double-down"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#"
-                >選項五&nbsp;<i class="fas fa-angle-double-down"></i
-              ></a>
-            </li>
+            <li><a href="#">選項四</a></li>
+            <li><a href="#">選項五</a></li>
             <li><a href="#">選項六</a></li>
-            <li>
-              <a href="#"
-                >選項七&nbsp;<i class="fas fa-angle-double-down"></i
-              ></a>
-            </li>
-            <li><a href="#">語言</a></li>
-          </ul>
+            <li><a href="#">選項七</a></li>              
+          </nav>
         </div>
+        <div class="searcg_local">
+          <form class="nav_louisa_header-search">
+              <input type="search" placeholder="店家查詢" id="search_open"/>
+              <label for="checkbox11" class="display_block"><i class="fas fa-search"></i></label>
+          </form>
+        </div>
+        
       </div>
     </div>
     <div class="path_web_body">
@@ -356,7 +348,6 @@
       </div>
       <div class="rice_footer">&copy; Copyright 2020/11/12 by EthanShang</div>
     </div>
-
     <div class="bootstrap">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -1354,7 +1345,6 @@
           </div>
         </div>
     </div>
-
     <div class="timeline_body">
       <div class="timeline_wrap">
         <h1>時間軸</h1>
@@ -1406,8 +1396,23 @@
 
         </ul>
       </div>
+    </div>    
+
+    <div class="rhombus_typesetting_body">
+      <ul class="rhombus_typesetting_ul">
+        <li class="rhombus_typesetting_box1"><p>交錯</p></li>
+        <li class="rhombus_typesetting_box2"><p>排版</p></li>
+        <li class="rhombus_typesetting_box3"><p>菱形</p></li>
+        <li class="rhombus_typesetting_box4"><p>菱形</p></li>
+        <li class="rhombus_typesetting_box5"><p>交錯</p></li>
+        <li class="rhombus_typesetting_box6"><p>排版</p></li>
+        <li class="rhombus_typesetting_box7"><p>交錯</p></li>
+        <li class="rhombus_typesetting_box8"><p>排版</p></li>
+        <li class="rhombus_typesetting_box9"><p>菱形</p></li>
+      </ul>
+
     </div>
-    
+
     <div class="louisacoffee_main-footer">
       <div class="louisacoffee_container">
         <div class="louisacoffee_footer-item">
@@ -1620,7 +1625,30 @@
     <script src="./js/bootstrap/bootstrap.js"></script>
     <script src="./js/bootstrap/popper.min.js"></script>
     <script src="./js/main.js"></script>
-
+      <script>
+        // $("#checkbox11").click(function(){
+        //   $("#search_open").hide();
+        //     $("#search_open").show();
+          
+          
+          
+        // });
+        
+        $(document).ready(function(){
+          var open=true
+            $("#checkbox11").click(function(){
+              if(open){
+              $("#search_open").animate({width:"100%",opacity:1});
+              $(".display_block").css({"border-radius":"0 200px 200px 0","transition":"2s"});
+              }else{
+                $("#search_open").animate({width:"0%",opacity:0});
+                $(".display_block").css({"border-radius":"200px","transition":"1s"});
+              }
+              open = !open
+              
+            });
+          });
+      </script>
     <script></script>
   </body>
 </html>
