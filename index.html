@@ -47,13 +47,16 @@
   </head>
   <body>
     <input type="checkbox" id="checkbox11">
+    <input type="checkbox" id="checkbox12">
+
     <div class="nav_louisa_body">
       <div class="nav_louisa_wrap">        
         <a href="#" class="nav_louisa_logo">
           <img src="./img/nav_louisa/logo-dark.png" alt="" />
         </a>
-        <div class="nav_louisa_main-nav">         
-          <nav>
+        <label for="checkbox12" class="display_block_menu"><i class="fas fa-align-left"></i></label>
+        <div class="nav_louisa_main-nav">           
+          <nav class="nav_menu_hide">
             <li><a href="#">選項一</a></li>
             <li><a href="#">選項二</a></li>
             <li><a href="#">選項三</a></li>
@@ -1623,31 +1626,36 @@
 
     <script src="./js/jquery-3.5.1.js"></script>
     <script src="./js/bootstrap/bootstrap.js"></script>
-    <script src="./js/bootstrap/popper.min.js"></script>
+    <script src="./js/popper.min.js"></script>
     <script src="./js/main.js"></script>
-      <script>
-        // $("#checkbox11").click(function(){
-        //   $("#search_open").hide();
-        //     $("#search_open").show();
-          
-          
-          
-        // });
-        
+      <script>        
         $(document).ready(function(){
           var open=true
             $("#checkbox11").click(function(){
+              
               if(open){
-              $("#search_open").animate({width:"100%",opacity:1});
+              $("#search_open").animate({width:"90%",opacity:1});
               $(".display_block").css({"border-radius":"0 200px 200px 0","transition":"2s"});
               }else{
                 $("#search_open").animate({width:"0%",opacity:0});
                 $(".display_block").css({"border-radius":"200px","transition":"1s"});
               }
-              open = !open
-              
+              open = !open              
             });
-          });
+            $("#checkbox12").click(function(){
+              var nav = document.getElementsByClassName('nav_menu_hide');
+
+                if(open){
+                $(nav).css({"display":"block"});
+                
+                }else{
+                  $(nav).css({"display":"none"});
+                 
+                }
+                open = !open              
+            });
+        });
+
       </script>
     <script></script>
   </body>

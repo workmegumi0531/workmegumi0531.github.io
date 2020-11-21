@@ -56,7 +56,7 @@
 .interactive_item:hover > .interactive_txt {
   opacity: 1;
 }
-@media screen and (max-width: 379px) {
+@media screen and (max-width: 414px) {
   .interactive_wrap {
     width: 100%;
     display: flex;
@@ -67,5 +67,24 @@
   .interactive_item {
     width: 100%;
     position: relative;
+  }
+}
+@media screen and (max-width: 769px) {
+  .interactive_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .interactive_item {
+    width: 100%;
+    position: relative;
+  }
+  .interactive_item .interactive_txt p {
+    /* font-size: 13px; */
+  }
+  .interactive_item .interactive_txt h2 {
+    /* font-size: 14px; */
   }
 }

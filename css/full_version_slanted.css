@@ -46,3 +46,60 @@
   font-size: 28px;
   font-weight: 300;
 }
+
+@media screen and (max-width: 415px) {
+  .full_version_slanted_container {
+    position: relative;
+  }
+  .full_version_slanted_container.full_version_slanted_banner-txt {
+    position: absolute;
+    top: -120px;
+  }
+  .full_version_slanted_container .full_version_slanted_banner-txt h1 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+  .full_version_slanted_container.full_version_slanted_banner-txt h2 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .full_version_slanted_container.full_version_slanted_banner-txt h1 small {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .full_version_slanted_container .full_version_slanted_banner-txt p {
+    width: 90%;
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 18px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .full_version_slanted_container {
+    position: relative;
+  }
+  .full_version_slanted_banner-txt {
+    position: absolute;
+    top: -110px;
+  }
+  .full_version_slanted_banner-txt h1 {
+    font-size: 60px;
+
+    font-weight: 900;
+  }
+  .full_version_slanted_banner-txt h2 {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .full_version_slanted_banner-txt h1 small {
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .full_version_slanted_banner-txt p {
+    width: 90%;
+    font-size: 21px;
+    font-weight: 300;
+    padding-right: 18px;
+  }
+}

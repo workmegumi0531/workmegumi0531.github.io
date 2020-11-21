@@ -117,3 +117,13 @@
 #side_menu .nav li:hover > ul {
   display: block;
 }
+@media screen and (max-width: 415px) {
+  #side_menu label {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 769px) {
+  #side_menu label {
+    bottom: 0;
+  }
+}
