@@ -1,9 +1,6 @@
 .horizontal_arrangement_wrap {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(45deg, #fdaecb, #e7597f, #fe8556);
   margin: 10px auto;
+  padding: 10px auto;
 }
 .horizontal_arrangement_container {
   width: 100%;
@@ -12,6 +9,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(45deg, #fdaecb, #e7597f, #fe8556);
+  padding: 10px auto;
+  height: 1000px;
 }
 .horizontal_arrangement_item {
   width: 370px;
@@ -66,4 +66,25 @@
   .horizontal_arrangement_btn:hover {
   color: white;
   background-color: #ccc;
+}
+
+@media screen and (max-width: 769px) {
+  .horizontal_arrangement_container {
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  .horizontal_arrangement_wrap .horizontal_arrangement_item {
+    margin: 10px;
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .horizontal_arrangement_container .horizontal_arrangement_item {
+    width: 100%;
+  }
 }

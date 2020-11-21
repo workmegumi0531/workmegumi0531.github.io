@@ -81,3 +81,7 @@
   background-color: #3e5293;
   color: #70f6df;
 }
+@media screen and (max-width: 415px) {
+}
+@media screen and (max-width: 769px) {
+}

@@ -48,3 +48,43 @@
 .staggered_item:nth-child(3) .staggered_text {
   background-color: rgba(111, 66, 193, 0.7);
 }
+@media screen and (max-width: 415px) {
+  .staggered_wrap {
+    width: 100vw;
+  }
+  .staggered_wrap .staggered_item {
+    display: flex;
+    flex-direction: column;
+  }
+  .staggered_item .staggered_pic,
+  .staggered_item .staggered_text {
+    width: 100%;
+    margin: 0;
+  }
+  .staggered_order_1 {
+    order: 1;
+  }
+  .staggered_order_2 {
+    order: 0;
+  }
+}
+@media screen and (max-width: 769px) {
+  .staggered_wrap {
+    width: 100vw;
+  }
+  .staggered_wrap .staggered_item {
+    display: flex;
+    flex-direction: column;
+  }
+  .staggered_item .staggered_pic,
+  .staggered_item .staggered_text {
+    width: 100%;
+    margin: 0;
+  }
+  .staggered_order_1 {
+    order: 1;
+  }
+  .staggered_order_2 {
+    order: 0;
+  }
+}

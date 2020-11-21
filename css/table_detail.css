@@ -4,6 +4,7 @@
   align-items: center;
   background: linear-gradient(90deg, #3d5894, #08c7a5);
   margin: 10px auto;
+  opacity: 0;
 }
 .table_detail_table {
   width: 800px;
@@ -61,4 +62,8 @@
   caption-side: bottom;
   text-align: right;
   padding: 10px 0;
+}
+@media screen and (max-width: 415px) {
+}
+@media screen and (max-width: 769px) {
 }

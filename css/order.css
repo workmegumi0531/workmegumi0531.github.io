@@ -55,3 +55,7 @@
 #order_list li#order_active ~ li::before {
   background-color: #999;
 }
+@media screen and (max-width: 415px) {
+}
+@media screen and (max-width: 769px) {
+}

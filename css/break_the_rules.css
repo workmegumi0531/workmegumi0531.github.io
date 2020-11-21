@@ -75,3 +75,18 @@
     transform: rotate(10deg) translateY(0px);
   }
 }
+
+@media screen and (max-width: 415px) {
+  .break_the_rules_body {
+    height: 1350px; /*垂直至中*/
+  }
+  .break_the_rules_wrap {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .break_the_rules_item {
+    margin: 60px auto;
+  }
+}
+@media screen and (max-width: 769px) {
+}

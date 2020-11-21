@@ -156,7 +156,6 @@
         <a href=""
           ><img src="./img/rice/200x40-1.jpg" alt="sample2"
         /></a>
-
         <ul>
           <li><a href="#">關於我</a></li>
           <li><a href="#">精選菜單</a></li>
@@ -227,10 +226,10 @@
 
       <div class="rice_products">
         <div class="rice_wrap">
-          <div class="rice_item rice_pic">
+          <div class="rice_item rice_pic rice_order_1">
             <img src="./img/rice/300x200-1.jpg" />
           </div>
-          <div class="rice_item rice_text">
+          <div class="rice_item rice_text rice_order_2">
             <h3>title</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
@@ -244,7 +243,7 @@
           </div>
         </div>
         <div class="rice_wrap">
-          <div class="rice_item rice_text">
+          <div class="rice_item rice_text rice_order_3">
             <h3>title</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
@@ -256,15 +255,15 @@
               voluptatum dolor enim velit repudiandae?
             </p>
           </div>
-          <div class="rice_item rice_pic">
+          <div class="rice_item rice_pic rice_order_4">
             <img src="./img/rice/300x200-2.jpg" />
           </div>
         </div>
         <div class="rice_wrap">
-          <div class="rice_item rice_pic">
+          <div class="rice_item rice_pic rice_order_5">
             <img src="./img/rice/300x200-3.jpg" />
           </div>
-          <div class="rice_item rice_text">
+          <div class="rice_item rice_text rice_order_6">
             <h3>title</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
@@ -676,13 +675,13 @@
           </div>
         </div>
         <div class="staggered_item">
-          <div class="staggered_text">
+          <div class="staggered_text staggered_order_1">
             <h2>先後密碼，做到。</h2>
             <p>
               出現目光的確作業那是供應政策，擁有賓館主管過來第二較大商品創造，思維擁有戰鬥全體同步，出處回頭通過。
             </p>
           </div>
-          <div class="staggered_pic">
+          <div class="staggered_pic staggered_order_2">
             <img src="./img/staggered/395-600x350.jpg" />
           </div>
         </div>
@@ -1646,14 +1645,12 @@
               var nav = document.getElementsByClassName('nav_menu_hide');
 
                 if(open){
-                $(nav).css({"display":"block"});
-                
+                $(nav).css({"display":"block"});                
                 }else{
-                  $(nav).css({"display":"none"});
-                 
+                  $(nav).css({"display":"none"});                 
                 }
-                open = !open              
-            });
+                open = !open                      
+            });           
         });
 
       </script>

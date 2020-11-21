@@ -36,3 +36,7 @@
 .path_web_breadcrumb a:hover {
   color: #ff0;
 }
+@media screen and (max-width: 415px) {
+}
+@media screen and (max-width: 769px) {
+}

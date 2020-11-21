@@ -6,6 +6,21 @@
   width: 100%;
   overflow: hidden;
   padding: 10px;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
 .cubes_item {
   float: left;
@@ -18,9 +33,7 @@
 .cubes_item:first-child ~ .cubes_item {
   width: 22.5%;
 }
-.cubes_pic {
-  /* margin: 5px; */
-}
+
 .cubes_pic img {
   width: 100%;
   height: 100%;
@@ -57,4 +70,40 @@
   color: aqua;
   font-weight: 100;
   line-height: 1.6em;
+}
+@media screen and (max-width: 415px) {
+  .cubes_body .cubes_wrap {
+    width: 100%;
+    padding: 10px;
+  }
+  .cubes_body .cubes_wrap .cubes_item {
+    display: inline-block;
+    float: none;
+    left: 0;
+  }
+
+  .cubes_body .cubes_wrap .cubes_item:first-child,
+  .cubes_body .cubes_wrap .cubes_item:first-child ~ .cubes_item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .cubes_wrap {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cubes_wrap .cubes_item {
+    float: none;
+    left: 0;
+    margin: 5px;
+  }
+  .cubes_wrap .cubes_item:first-child {
+    width: 48%;
+  }
+  .cubes_wrap .cubes_item:first-child ~ .cubes_item {
+    width: 48%;
+  }
 }
