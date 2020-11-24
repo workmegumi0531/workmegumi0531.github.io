@@ -1630,8 +1630,7 @@
       <script>        
         $(document).ready(function(){
           var open=true
-            $("#checkbox11").click(function(){
-              
+            $("#checkbox11").click(function(){              
               if(open){
               $("#search_open").animate({width:"90%",opacity:1});
               $(".display_block").css({"border-radius":"0 200px 200px 0","transition":"2s"});
@@ -1643,12 +1642,7 @@
             });
             $("#checkbox12").click(function(){
               var nav = document.getElementsByClassName('nav_menu_hide');
-
-                if(open){
-                $(nav).css({"display":"block"});                
-                }else{
-                  $(nav).css({"display":"none"});                 
-                }
+                open ? $(nav).css({"display":"block"}): $(nav).css({"display":"none"});              
                 open = !open                      
             });           
         });
