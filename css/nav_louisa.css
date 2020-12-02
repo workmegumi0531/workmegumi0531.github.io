@@ -45,7 +45,7 @@
   border-bottom: 1px solid #fff;
   transition: 0.5s;
 }
-.nav_louisa_body .nav_louisa_main-nav a:hover:after {
+.nav_louisa_body .nav_louisa_main-nav a:focus:after {
   left: 0%; /*將互動的線往左右兩邊*/
   right: 0%; /*將互動的線往左右兩邊*/
 } /*超連結上的展開線*/
